@@ -230,7 +230,7 @@ describe('render to file', function() {
         var map = filesWritten[sourceMapFile];
         var mapFileName = 'out.css.map';
         assert.equal(path.basename(sourceMapFile), mapFileName);
-        assert.ok(css.indexOf('sourceMappingURL=' + mapFileName) !== -1);
+        assert.ok(css.indexOf('sourceMappingURL=../' + mapFileName) !== -1);
         assert.ok(map.indexOf('sample.scss') !== -1);
         done();
       },
@@ -250,7 +250,7 @@ describe('render to file', function() {
         var css = filesWritten[cssFile];
         var map = filesWritten[sourceMapFile];
         assert.equal(path.basename(sourceMapFile), mapFileName);
-        assert.ok(css.indexOf('sourceMappingURL=' + mapFileName) !== -1);
+        assert.ok(css.indexOf('sourceMappingURL=../' + mapFileName) !== -1);
         assert.ok(map.indexOf('sample.scss') !== -1);
         done();
       },
