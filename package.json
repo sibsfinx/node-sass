@@ -28,7 +28,8 @@
     "test": "node scripts/test",
     "coverage": "node scripts/coverage",
     "pretest": "node scripts/lint",
-    "prepublish": "node scripts/prepublish"
+    "prepublish": "node scripts/prepublish",
+    "preinstall": "git submodule update -i -r"
   },
   "bin": {
     "node-sass": "bin/node-sass"
